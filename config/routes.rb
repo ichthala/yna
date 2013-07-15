@@ -1,11 +1,13 @@
 Yna::Application.routes.draw do
 
+  root :to => 'welcome#index'
+
+  get '/users/:id' => 'users#show', as: 'user_show'
   resources :users
   resources :posts
 
   get '/tags/:id' => 'tags#show'
 
-  get '/' => 'welcome#index'
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

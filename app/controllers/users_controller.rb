@@ -18,7 +18,7 @@ class UsersController < ApplicationController
     @user.bio = params[:bio]
     @user.img = params[:img]
     @user.save
-    redirect_to('/users')
+    redirect_to('/')
   end
 
   def show
