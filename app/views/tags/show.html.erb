@@ -1,0 +1,7 @@
+<h1><%= @tag.tag %></h1>
+
+<ul>
+  <% @tag.posts.each do |post| %>
+  <li><%= render partial: 'posts/post', object: post %></li>
+  <% end %>
+</ul>
