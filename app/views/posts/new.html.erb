@@ -1,0 +1,13 @@
+<h1>Write a post</h1>
+
+<form action="/posts" method="post">
+  <input type="text" name="text" placeholder="Tell your story.">
+    <ul style="list-style-type: none">
+    <% @tags.each do |tag| %>
+    <li>
+      <input type='checkbox' name='tag_ids[]' value='<%= tag.id %>' /> <%= "#{tag.tag}" %>
+    </li>
+    <% end %>
+  </ul>
+  <button>Post</button>
+</form>
