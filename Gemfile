@@ -14,6 +14,7 @@ gem 'disqus'
 gem 'geocoder'
 
 gem 'gmaps4rails'
+gem 'ym4r'
 
 gem 'devise'
 

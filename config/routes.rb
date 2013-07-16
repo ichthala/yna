@@ -5,6 +5,9 @@ Yna::Application.routes.draw do
   root :to => 'welcome#index'
 
   get '/users/:id' => 'users#show', as: 'user_show'
+
+  get '/posts/search' => 'posts#search_results'
+
   resources :users
   resources :posts
 

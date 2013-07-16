@@ -151,6 +151,7 @@ GEM
       multi_json (~> 1.0, >= 1.0.2)
     warden (1.2.3)
       rack (>= 1.0)
+    ym4r (0.6.1)
 
 PLATFORMS
   ruby
@@ -175,3 +176,4 @@ DEPENDENCIES
   sass-rails (~> 3.2.3)
   sqlite3
   uglifier (>= 1.0.3)
+  ym4r

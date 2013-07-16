@@ -2,16 +2,21 @@ class PostsController < ApplicationController
 
   # For testing purposes only
   def index
+    @json = Post.all.to_gmaps4rails
   end
 
   def search_results
-    if params[:zip] != ""
-      @zip = params[:zip]
-      @posts = Post.where("zip = #{@zip}")
+    if params[:zipcode] != ""
+      @zipcode = params[:zipcode]
+      # binding.pry
+      @posts = Post.near(Post.where("zipcode = #{@zipcode}").first, 50)
+      # @posts = @posts_as_text.all.to_gmaps4rails
     else
       @tag = Tag.where("tag = #{params[:tag]}")
       @posts = @tag.posts
+      # @posts = @posts_as_text.all.to_gmaps4rails
     end
+    @json = @posts.all.to_gmaps4rails
   end
 
   def new

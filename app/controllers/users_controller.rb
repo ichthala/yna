@@ -5,11 +5,6 @@ class UsersController < ApplicationController
     @users = User.all
   end
 
-  def new
-    # for error handling
-    @user = User.new
-  end
-
   def create
     @user = User.create()
     @user.username = params[:username]
