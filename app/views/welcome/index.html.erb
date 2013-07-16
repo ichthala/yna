@@ -2,5 +2,9 @@
 <p>Search for stories by zip code or subject.</p>
 <form action="/posts/search" method="get">
   <input type="text" name="zipcode" placeholder="Zip code">
-  <input type="text" name="tag" placeholder="Tag">
+  <select>
+    <% @tags.each do |tag| %>
+    <option value="<%= tag.id %>"><%= tag.tag %></option>
+    <% end %>
+  </select>
 </form>

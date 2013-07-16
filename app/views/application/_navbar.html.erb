@@ -6,6 +6,11 @@
   <%= link_to('About', '/about') %>
   <%= link_to('Resources', '/resources') %>
 
+  <ul class="hmenu">
+    <%= render 'devise/menu/registration_items' %>
+    <%= render 'devise/menu/login_items' %>
+  </ul>
+
   <!-- XXX -->
   <%= link_to('Your Posts', '/posts') %>
 </nav>

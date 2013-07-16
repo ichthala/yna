@@ -5,9 +5,13 @@ class PostsController < ApplicationController
   end
 
   def search_results
-    @zip = params[:zip]
-    # @tag = params[:tag]
-    @posts = Post.where("zip = #{@zip}")
+    if params[:zip] != ""
+      @zip = params[:zip]
+      @posts = Post.where("zip = #{@zip}")
+    else
+      @tag = Tag.where("tag = #{params[:tag]}")
+      @posts = @tag.posts
+    end
   end
 
   def new

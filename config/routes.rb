@@ -1,5 +1,7 @@
 Yna::Application.routes.draw do
 
+  devise_for :users
+
   root :to => 'welcome#index'
 
   get '/users/:id' => 'users#show', as: 'user_show'
