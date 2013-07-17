@@ -18,6 +18,9 @@ Yna::Application.routes.draw do
   get '/tags/:id' => 'tags#show'
   get '/tags' => 'tags#index'
 
+  get '/about' => 'info#about'
+  get '/resources' => 'info#resources'
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

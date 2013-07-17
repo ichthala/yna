@@ -8,6 +8,8 @@
     <li><%= link_to('Resources', '/resources') %></li>
     <li><%= render 'devise/menu/login_items' %></li>
     <!-- XXX -->
-    <li id="username"><%= link_to(current_user.username, "/users/#{current_user.id}") %></li>
+    <% if current_user %>
+      <li id="username"><%= link_to(current_user.username, "/users/#{current_user.id}") %></li>
+    <% end %>
   </ul>
 </nav>

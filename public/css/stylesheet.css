@@ -20,11 +20,7 @@ nav li {
   font-size: 120px;
   text-align: center;
   margin-top: 150px;
-  color: #eee;
-}
-
-#front-page-div {
-  background-color: #f96;
+  color: #aaa;
 }
 
 #front-page-search {
@@ -32,6 +28,7 @@ nav li {
   margin-top: 100px;
   width: 500px;
   text-align: center;
+  color: #fff;
 }
 
 body {
@@ -52,12 +49,13 @@ html {
 .left {
   width: 30%;
   height: 100%;
-  background-color: #f96;
+  background-color: #202;
   float: left;
 }
 
 .yna-heading {
   /*font-size: 200px;*/
+  color: #aaa;
 }
 
 .map-container {
@@ -81,7 +79,16 @@ html {
   padding: 10px;
 }
 
-
+.tag {
+  display: inline;
+  background-color: #55a;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #005;
+  margin-right: 3px;
+  padding: 3px;
+  text-align: center;
+}
 
 
 
