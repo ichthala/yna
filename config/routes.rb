@@ -4,9 +4,13 @@ Yna::Application.routes.draw do
 
   root :to => 'welcome#index'
 
+  get '/error' => 'welcome#error'
+
   get '/users/:id' => 'users#show', as: 'user_show'
 
+  get '/posts/recent' => 'posts#recent'
   get '/posts/search' => 'posts#search_results'
+  get '/my_posts' => 'posts#my_posts'
 
   resources :users
   resources :posts

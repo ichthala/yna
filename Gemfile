@@ -14,9 +14,10 @@ gem 'disqus'
 gem 'geocoder'
 
 gem 'gmaps4rails'
-gem 'ym4r'
 
 gem 'devise'
+
+gem 'dotenv'
 
 # Gems used only for assets and not required
 # in production environments by default.

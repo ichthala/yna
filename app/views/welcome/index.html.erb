@@ -1,10 +1,16 @@
-<h1>You're Not Alone.</h1>
-<p>Search for stories by zip code or subject.</p>
-<form action="/posts/search" method="get">
-  <input type="text" name="zipcode" placeholder="Zip code">
-  <select>
-    <% @tags.each do |tag| %>
-    <option value="<%= tag.id %>"><%= tag.tag %></option>
+<body style="background-color: #f96">
+<div id="front-page-div">
+  <h1 id="front-page-heading">You're Not Alone.</h1>
+
+  <div id="front-page-search">
+    <p>Search for stories by zip code or subject.</p>
+
+    <%= form_tag('/posts/search', method: 'get') do %>
+    <%= text_field_tag :zipcode, nil, :placeholder => 'Zip code' %>
+    <%= select_tag "tag_id", options_from_collection_for_select(@tags, :id, :tag), :prompt => "Choose a tag" %>
+    <%= submit_tag 'Search' %>
     <% end %>
-  </select>
-</form>
+  </div>
+
+</div>
+</body>

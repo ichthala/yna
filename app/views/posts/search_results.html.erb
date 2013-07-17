@@ -1,5 +1,13 @@
-<%= gmaps4rails(@json) %>
+<div class="left">
+  <h1 class="yna-heading">
+    You're <br />Not <br />Alone.
+  </h1>
+</div>
 
-<%= @posts.each do |post|  %>
-  <%= render post %>
-<% end %>
+<div class="right">
+  <%= gmaps4rails(@json) %>
+
+  <% @posts.each do |post|  %>
+    <%= render post %>
+  <% end %>
+</div>

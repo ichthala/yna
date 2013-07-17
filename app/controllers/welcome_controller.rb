@@ -4,4 +4,7 @@ class WelcomeController < ApplicationController
     @tags = Tag.all
   end
 
+  def error
+  end
+
 end

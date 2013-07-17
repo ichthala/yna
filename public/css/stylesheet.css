@@ -1,0 +1,92 @@
+nav {
+  background-color: #444;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  display: block;
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  padding: 10px;
+  /*float: left;*/
+}
+
+#front-page-heading {
+  font-size: 120px;
+  text-align: center;
+  margin-top: 150px;
+  color: #eee;
+}
+
+#front-page-div {
+  background-color: #f96;
+}
+
+#front-page-search {
+  margin: auto;
+  margin-top: 100px;
+  width: 500px;
+  text-align: center;
+}
+
+body {
+  background-color: #eee;
+  height: 100%;
+}
+
+html {
+  height: 100%;
+}
+
+#username a {
+  /*float: right;*/
+  color: #eee;
+  text-align: right;
+}
+
+.left {
+  width: 30%;
+  height: 100%;
+  background-color: #f96;
+  float: left;
+}
+
+.yna-heading {
+  /*font-size: 200px;*/
+}
+
+.map-container {
+  /*float:right;*/
+  width: 40%;
+}
+
+.right {
+  padding-left: 50px;
+  width: 65%;
+  float: right;
+}
+
+.post {
+  border-radius: 5px;
+  border: 1px solid #999;
+  background-color: #fff;
+  width: 500px;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+
+
+
+
+
+
+
+
+

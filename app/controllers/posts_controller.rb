@@ -2,7 +2,17 @@ class PostsController < ApplicationController
 
   # For testing purposes only
   def index
-    @json = Post.all.to_gmaps4rails
+    # @json = Post.all.to_gmaps4rails
+    @posts = Post.all
+  end
+
+  def recent
+    # displays the 30 most recent posts
+    @posts = Post.order("created_at DESC")[0..29]
+  end
+
+  def my_posts
+    @posts = current_user.posts
   end
 
   def search_results
@@ -12,7 +22,7 @@ class PostsController < ApplicationController
       @posts = Post.near(Post.where("zipcode = #{@zipcode}").first, 50)
       # @posts = @posts_as_text.all.to_gmaps4rails
     else
-      @tag = Tag.where("tag = #{params[:tag]}")
+      @tag = Tag.where("id = #{params[:tag_id]}").first
       @posts = @tag.posts
       # @posts = @posts_as_text.all.to_gmaps4rails
     end
@@ -29,6 +39,7 @@ class PostsController < ApplicationController
 
   def create
     post = Post.new
+    post.user = current_user
     post.text = params[:text]
     current_location = request.location
     if current_location.data["ip"] == "127.0.0.1"

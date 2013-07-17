@@ -3,3 +3,8 @@
 <h2><%= @user.email %></h2>
 
 <p><%= @user.bio %></p>
+
+<h2>Your Posts:</h2>
+<%= render current_user.posts %>
+
+<%= render 'devise/menu/registration_items' %>
