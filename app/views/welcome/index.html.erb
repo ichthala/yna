@@ -1,17 +1,11 @@
-<!-- INLINE STYLING BAD MUST FIX XXX -->
-<body style="background-color: #202">
-<div id="front-page-div">
-  <h1 id="front-page-heading">You're Not Alone.</h1>
+<h1 id="front-page-heading">You're Not Alone.</h1>
 
-  <div id="front-page-search">
-    <p>Search for stories by zip code or subject.</p>
+<div id="front-page-search">
+  <p>Search for stories by zip code or subject.</p>
 
-    <%= form_tag('/posts/search', method: 'get') do %>
-    <%= text_field_tag :zipcode, nil, :placeholder => 'Zip code' %>
-    <%= select_tag "tag_id", options_from_collection_for_select(@tags, :id, :tag), :prompt => "Choose a tag" %>
-    <%= submit_tag 'Search' %>
-    <% end %>
-  </div>
-
+  <%= form_tag('/posts/search', method: 'get') do %>
+  <%= text_field_tag :zipcode, nil, :placeholder => 'Zip code' %>
+  <%= select_tag "tag_id", options_from_collection_for_select(@tags, :id, :tag), :prompt => "Choose a tag" %>
+  <%= submit_tag 'Search' %>
+  <% end %>
 </div>
-</body>

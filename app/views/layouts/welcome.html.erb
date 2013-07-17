@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>YNA</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+  <link href="/css/stylesheet.css" rel="stylesheet">
+</head>
+
+<body id="front-page-body">
+
+  <%= render 'navbar' %>
+
+  <div class="container-fluid">
+
+    <!-- I think this came from devise -->
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+
+    <%= yield %>
+
+    <!-- I think this came from gmaps4rails -->
+    <%= yield :scripts %>
+
+  </div>
+
+</body>
+</html>

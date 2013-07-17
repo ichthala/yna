@@ -9,15 +9,11 @@ gem 'sqlite3'
 
 gem 'pg'
 
-gem 'disqus'
-
 gem 'geocoder'
 
 gem 'gmaps4rails'
 
 gem 'devise'
-
-gem 'dotenv'
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -53,6 +49,7 @@ gem 'jquery-rails'
 # gem 'debugger'
 
 group :development, :test do
+  gem 'dotenv-rails'
   gem 'pry-rails'           # Causes rails console to open pry
                             # https://github.com/rweng/pry-rails
   gem 'pry-debugger'        # Adds step, next, finish, and continue commands and breakpoints

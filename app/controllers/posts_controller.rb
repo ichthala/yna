@@ -1,11 +1,5 @@
 class PostsController < ApplicationController
 
-  # For testing purposes only
-  def index
-    # @json = Post.all.to_gmaps4rails
-    @posts = Post.all
-  end
-
   def recent
     # displays the 30 most recent posts
     @posts = Post.order("created_at DESC")[0..29]

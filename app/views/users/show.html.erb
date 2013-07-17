@@ -4,7 +4,9 @@
 
 <p><%= @user.bio %></p>
 
-<h2>Your Posts:</h2>
-<%= render current_user.posts %>
+<% if current_user && current_user.id == @user.id %>
+  <h2>Your Posts:</h2>
+  <%= render current_user.posts %>
 
-<%= render 'devise/menu/registration_items' %>
+  <%= render 'devise/menu/registration_items' %>
+<% end %>

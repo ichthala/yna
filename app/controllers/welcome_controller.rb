@@ -1,10 +1,9 @@
 class WelcomeController < ApplicationController
 
+  layout "welcome"
+
   def index
     @tags = Tag.all
-  end
-
-  def error
   end
 
 end

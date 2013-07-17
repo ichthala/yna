@@ -1,10 +1,6 @@
-<div class="left">
-  <h1 class="yna-heading">
-    You're <br />Not <br />Alone.
-  </h1>
-</div>
+<%= render 'yna-box' %>
 
-<div class="right">
+<div class="span9">
   <%= gmaps4rails(@json) %>
 
   <% @posts.each do |post|  %>

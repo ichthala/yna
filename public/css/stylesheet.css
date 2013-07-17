@@ -1,5 +1,5 @@
 nav {
-  background-color: #444;
+  background-color: #000;
   font-size: 16px;
   padding-top: 5px;
   padding-bottom: 2px;
@@ -13,14 +13,18 @@ nav ul {
 nav li {
   display: inline;
   padding: 10px;
-  /*float: left;*/
+}
+
+#front-page-body {
+  background-color: #313;
+  background-image: url('/img/rain.jpg');
 }
 
 #front-page-heading {
   font-size: 120px;
   text-align: center;
   margin-top: 150px;
-  color: #aaa;
+  color: #eee;
 }
 
 #front-page-search {
@@ -32,7 +36,7 @@ nav li {
 }
 
 body {
-  background-color: #eee;
+  background-color: #f1eeff;
   height: 100%;
 }
 
@@ -46,11 +50,11 @@ html {
   text-align: right;
 }
 
-.left {
-  width: 30%;
-  height: 100%;
+.yna-box {
+  /*width: 30%;*/
+  /*height: 100%;*/
   background-color: #202;
-  float: left;
+  /*float: left;*/
 }
 
 .yna-heading {
@@ -58,10 +62,10 @@ html {
   color: #aaa;
 }
 
-.map-container {
-  /*float:right;*/
+/*.map-container {
+  float:right;
   width: 40%;
-}
+}*/
 
 .right {
   padding-left: 50px;
@@ -74,7 +78,6 @@ html {
   border: 1px solid #999;
   background-color: #fff;
   width: 500px;
-  margin: auto;
   margin-bottom: 10px;
   padding: 10px;
 }
