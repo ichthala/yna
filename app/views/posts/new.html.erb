@@ -1,5 +1,3 @@
-<h1>Write a post</h1>
-
 <% if @post.errors.any? %>
   <ul>
   <% @post.errors.full_messages.each do |msg| %>
@@ -8,13 +6,19 @@
 </ul>
 <% end %>
 
+<h1>Write a post</h1>
+
 <%= form_for @post do |f| %>
   <%= f.text_field :text, :placeholder => "Tell your story." %>
 
-  <% @tags.each do |tag| %>
-    <%= label_tag tag.tag %>
-    <%= check_box_tag "post[tag_ids][]", tag.id %>
+  <ul>
+  <% Tag.all.each do |tag| %>
+    <li>
+      <%= check_box_tag "post[tag_ids][]", tag.id %>
+      <%= label_tag tag.tag %>
+    </li>
   <% end %>
+  </ul>
 
   <%= f.submit 'Post' %>
 

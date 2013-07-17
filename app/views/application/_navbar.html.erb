@@ -1,6 +1,6 @@
-<nav>
+<div class="navbar">
   <ul>
-    <li><%= link_to('YNA', '/') %></li>
+    <li><%= link_to('YNA', '/', :class => 'brand') %></li>
     <li><%= link_to('Post', '/posts/new') %></li>
     <li><%= link_to('Recent Posts', '/posts/recent') %></li>
     <li><%= link_to('Tags', '/tags') %></li>
@@ -12,4 +12,4 @@
       <li id="username"><%= link_to(current_user.username, "/users/#{current_user.id}") %></li>
     <% end %>
   </ul>
-</nav>
+</div>

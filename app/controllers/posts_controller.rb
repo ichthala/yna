@@ -10,29 +10,32 @@ class PostsController < ApplicationController
   end
 
   def search_results
-    if params[:zipcode] != ""
+    # search for a tag in a given area
+    if params[:zipcode] != "" && params[:tag_id] != ""
+      @posts = Post.near(Post.where("zipcode = #{params[:zipcode]}").first, 50) & (Tag.where("id = #{params[:tag_id]}")).first.posts.order("created_at DESC")
+
+    # search for all posts in a given area
+    elsif params[:zipcode] != ""
       @zipcode = params[:zipcode]
-      # binding.pry
       @posts = Post.near(Post.where("zipcode = #{@zipcode}").first, 50)
-      # @posts = @posts_as_text.all.to_gmaps4rails
+
+    # search for a tag
     else
       @tag = Tag.where("id = #{params[:tag_id]}").first
-      @posts = @tag.posts
-      # @posts = @posts_as_text.all.to_gmaps4rails
+      @posts = @tag.posts.order("created_at DESC")[0..29]
     end
-    @json = @posts.all.to_gmaps4rails
+
+    # generate json for map display
+    @json = @posts.to_gmaps4rails
+    # raise
   end
 
   def new
     # for error handling
     @post = Post.new
-
-    # for checkboxes
-    @tags = Tag.all
   end
 
   def create
-
     @post = Post.new(params[:post])
     @post.user = current_user
 
@@ -50,7 +53,6 @@ class PostsController < ApplicationController
     else
       render :new
     end
-
   end
 
   def show
