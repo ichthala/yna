@@ -12,11 +12,13 @@
 <div class="container-fluid">
 
   <%= render 'navbar' %>
-  <%= render 'yna-box' %>
 
   <!-- I think this came from devise -->
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
+
+  <!-- renders 3-column page title box on every page except the landing page -->
+  <%= render 'yna-box' %>
 
   <div class="span9">
     <%= yield %>

@@ -61,8 +61,6 @@ GEM
       orm_adapter (~> 0.1)
       railties (>= 3.2.6, < 5)
       warden (~> 1.2.3)
-    disqus (1.0.4)
-      json
     dotenv (0.8.0)
     dotenv-rails (0.8.0)
       dotenv (= 0.8.0)
@@ -180,7 +178,6 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 3.2.1)
   devise
-  disqus
   dotenv-rails
   geocoder
   gmaps4rails

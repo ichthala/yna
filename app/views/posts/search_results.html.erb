@@ -1,9 +1,5 @@
-<%= render 'yna-box' %>
+<%= gmaps4rails(@json) %>
 
-<div class="span9">
-  <%= gmaps4rails(@json) %>
-
-  <% @posts.each do |post|  %>
-    <%= render post %>
-  <% end %>
-</div>
+<% @posts.each do |post|  %>
+  <%= render post %>
+<% end %>

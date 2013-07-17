@@ -25,5 +25,5 @@ class Post < ActiveRecord::Base
   end
   after_validation :reverse_geocode
 
-  attr_accessible :text, :zipcode, :latitude, :longitude
+  attr_accessible :text, :zipcode, :latitude, :longitude, :tag_ids
 end
