@@ -1,11 +1,11 @@
 <div class="post">
 
-  <p><%= truncate(post.text, length:200) %></p>
+  <p><%= truncate(post.text, length:256) %></p>
   <p class="see-more"><%= link_to "See more...", "/posts/#{post.id}#disqus_thread" %></p>
 
   <% post.tags.each do |tag| %>
     <div class="tag">
-      <%= "#{tag.tag} " %>
+      <%= link_to "#{tag.tag}", "/tags/#{tag.id}" %>
     </div>
   <% end %>
 

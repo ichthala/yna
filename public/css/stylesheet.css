@@ -88,6 +88,10 @@ html {
   float: right;
 }
 
+p {
+  font-family: Garamond, serif;
+}
+
 .post {
   border-radius: 5px;
   border: 1px solid #999;
@@ -99,13 +103,18 @@ html {
 
 .tag {
   display: inline;
-  background-color: #55a;
+  background-color: #08c;
   color: #fff;
   border-radius: 5px;
   border: 1px solid #005;
   margin-right: 3px;
   padding: 3px;
   text-align: center;
+  font-size: .75em;
+}
+
+.tag a {
+  color: #fff;
 }
 
 

@@ -8,8 +8,142 @@
  * You're free to add application-wide styles to this file and they'll appear at the top of the
  * compiled file, but it's generally better to create a new file per style scope.
  *
- *= require_self
  *= require_tree .
  *= require bootstrap_and_overrides
  *=<%= stylesheet_link_tag 'gmaps4rails' %>
+ *= require_self
  */
+
+body, html, .container-fluid, .row-fluid {
+  height:100%;
+}
+
+.row-fluid .span9{
+  float: right;
+}
+
+body {
+  padding-top: 40px;
+  background-color: #e3efff;
+}
+
+nav {
+  background-color: #000;
+  font-size: 16px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  display: block;
+}
+
+ul {
+  list-style-type: none;
+}
+
+nav li {
+  display: inline;
+  padding: 10px;
+}
+
+.navbar {
+  margin-bottom: 0px;
+}
+
+.navbar-inverse li a {
+  color: #08c;
+  margin-bottom: 0px;
+}
+
+#username a {
+  /*float: right;*/
+  color: #eee;
+  text-align: right;
+}
+
+.container-fluid {
+  padding: 0;
+}
+
+#front-page-body {
+  background-color: #313;
+  background-image: url('/img/rain.jpg');
+}
+
+#front-page-heading {
+  font-size: 120px;
+  text-align: center;
+  margin-top: 150px;
+}
+
+.youre {
+  color: #777;
+}
+
+.not {
+  color: #aaa;
+}
+
+.alone {
+  color: #eee;
+}
+
+#front-page-search {
+  margin: auto;
+  margin-top: 100px;
+  width: 500px;
+  text-align: center;
+  color: #fff;
+}
+
+.yna-box {
+  height: 100%;
+  background-color: #005;
+  position: fixed
+}
+
+.yna-heading {
+  /*font-size: 200px;*/
+  color: #aaa;
+}
+
+/*.map-container {
+  float:right;
+  width: 40%;
+}*/
+
+.content {
+  float: right
+}
+
+/*p {
+  font-family: Garamond, serif;
+}*/
+
+.post {
+  border-radius: 5px;
+  border: 1px solid #999;
+  background-color: #fff;
+  width: 500px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.tag {
+  display: inline;
+  background-color: #08c;
+  color: #fff;
+  border-radius: 5px;
+  border: 1px solid #059;
+  margin-right: 3px;
+  padding: 3px;
+  text-align: center;
+  font-size: .75em;
+}
+
+.tag a {
+  color: #fff;
+}
+
+.alert {
+  border: 0px;
+  background-color: none !important;
+}

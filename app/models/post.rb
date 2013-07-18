@@ -8,7 +8,7 @@ class Post < ActiveRecord::Base
   validate :post_must_have_some_tags
 
   def post_must_have_some_tags
-    if tags.count <= 0 || tags.count > 7
+    if tags.size <= 0 || tags.size > 7
       errors.add(:tags, "must be between 1 and 7")
     end
   end

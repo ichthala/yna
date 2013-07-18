@@ -5,43 +5,44 @@
   <%= stylesheet_link_tag    "application", :media => "all" %>
   <%= javascript_include_tag "application" %>
   <%= csrf_meta_tags %>
-  <link href="/css/stylesheet.css" rel="stylesheet">
 </head>
+
 <body>
 
 <%= render 'navbar' %>
 
 <div class="container-fluid">
 
-  <!-- I think this came from devise -->
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
+  <div class="row-fluid">
 
-  <!-- renders 3-column page title box on every page except the landing page -->
-  <%= render 'yna-box' %>
+    <!-- renders 3-column title box on every page except the landing page -->
+    <%= render 'yna-box' %>
 
-  <div class="span9">
-    <%= yield %>
+    <div class="span9 content">
 
-    <!-- I think this came from gmaps4rails -->
-    <%= yield :scripts %>
+      <%= yield %>
+
+      <!-- I think this came from gmaps4rails -->
+      <%= yield :scripts %>
+
+    </div>
   </div>
 
 </div>
 
-    <!-- code from Disqus that allows comment count to be displayed -->
-      <script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-    var disqus_shortname = 'yourenotalone2013'; // required: replace example with your forum shortname
+<!-- code from Disqus that allows comment count to be displayed -->
+  <script type="text/javascript">
+/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+var disqus_shortname = 'yourenotalone2013'; // required: replace example with your forum shortname
 
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function () {
-        var s = document.createElement('script'); s.async = true;
-        s.type = 'text/javascript';
-        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
-        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
-    }());
-    </script>
+/* * * DON'T EDIT BELOW THIS LINE * * */
+(function () {
+    var s = document.createElement('script'); s.async = true;
+    s.type = 'text/javascript';
+    s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+    (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+}());
+</script>
 
 </body>
 </html>

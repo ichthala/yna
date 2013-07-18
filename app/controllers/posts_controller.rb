@@ -3,6 +3,10 @@ class PostsController < ApplicationController
   def recent
     # displays the 30 most recent posts
     @posts = Post.order("created_at DESC")[0..29]
+    @json = @posts.to_gmaps4rails do |post, marker|
+      marker.infowindow render_to_string(:partial => "post", :locals => { :post => post})
+      marker.json({ :id => post.id })
+    end
   end
 
   def my_posts
@@ -12,6 +16,8 @@ class PostsController < ApplicationController
   def search_results
     # search for a tag in a given area
     if params[:zipcode] != "" && params[:tag_id] != ""
+
+      # XXX can I turn this into a single query?
       @posts = Post.near(Post.where("zipcode = #{params[:zipcode]}").first, 50) & (Tag.where("id = #{params[:tag_id]}")).first.posts.order("created_at DESC")
 
     # search for all posts in a given area
@@ -26,7 +32,10 @@ class PostsController < ApplicationController
     end
 
     # generate json for map display
-    @json = @posts.to_gmaps4rails
+    @json = @posts.to_gmaps4rails do |post, marker|
+      marker.infowindow render_to_string(:partial => "post", :locals => { :post => post})
+      marker.json({ :id => post.id })
+    end
     # raise
   end
 
