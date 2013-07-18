@@ -18,12 +18,11 @@ class PostsController < ApplicationController
     if params[:zipcode] != "" && params[:tag_id] != ""
 
       # XXX can I turn this into a single query?
-      @posts = Post.near(Post.where("zipcode = #{params[:zipcode]}").first, 50) & (Tag.where("id = #{params[:tag_id]}")).first.posts.order("created_at DESC")
+      @posts = Post.near(Post.where("zipcode = \'#{params[:zipcode]}\'").first, 50) & (Tag.where("id = #{params[:tag_id]}")).first.posts.order("created_at DESC")
 
     # search for all posts in a given area
     elsif params[:zipcode] != ""
-      @zipcode = params[:zipcode]
-      @posts = Post.near(Post.where("zipcode = \'#{@zipcode}\'").first, 50)
+      @posts = Post.near(Post.where("zipcode = \'#{params[:zipcode]}\'").first, 50)
 
     # search for a tag
     else
