@@ -1,6 +1,6 @@
 <%= @post.text %><br />
 <%= render @post.tags %>
-<% if current_user && current_user.id == @post.user.id %>
+<% if current_user && @post.user && current_user.id == @post.user.id %>
     <%= button_to "Delete", "/posts/#{@post.id}", method: 'delete' %>
 <% end %>
 
