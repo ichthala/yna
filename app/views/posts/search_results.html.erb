@@ -1,5 +1,14 @@
-<%= gmaps4rails(@json) %>
+<% if @posts.any? %>
 
-<% @posts.each do |post|  %>
-  <%= render post %>
+  <%= gmaps4rails(@json) %>
+
+  <% @posts.each do |post|  %>
+    <%= render post %>
+  <% end %>
+
+<% else %>
+
+  <p>Your search returned no results.</p>
+  <p><%= link_to 'Try again?', '/' %></p>
+
 <% end %>
