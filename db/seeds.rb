@@ -6,7 +6,7 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 Tag.delete_all
-Post.delete_all
+# Post.delete_all
 
 t1 = Tag.create(tag: "depression")
 t4 = Tag.create(tag: "mental illness")

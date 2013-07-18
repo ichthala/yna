@@ -23,7 +23,7 @@ class PostsController < ApplicationController
     # search for all posts in a given area
     elsif params[:zipcode] != ""
       @zipcode = params[:zipcode]
-      @posts = Post.near(Post.where("zipcode = #{@zipcode}").first, 50)
+      @posts = Post.near(Post.where("zipcode = 10003").first, 50)
 
     # search for a tag
     else

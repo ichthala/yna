@@ -9,7 +9,7 @@ class TagsController < ApplicationController
   end
 
   def index_alphabetical
-    @tags = Tag.order("tag COLLATE NOCASE ASC")
+    @tags = Tag.find(:all, :order => "LOWER(tag)")
   end
 
   def show
