@@ -74,7 +74,9 @@ class PostsController < ApplicationController
   def update
   end
 
-  def delete
+  def destroy
+    Post.find(params[:id]).destroy
+    redirect_to("/users/#{current_user.id}")
   end
 
 end

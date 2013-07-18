@@ -1,5 +1,8 @@
 <%= @post.text %><br />
 <%= render @post.tags %>
+<% if current_user.id == @post.user.id %>
+    <%= button_to "Delete", "/posts/#{@post.id}", method: 'delete' %>
+<% end %>
 
     <div id="disqus_thread"></div>
     <script type="text/javascript">
