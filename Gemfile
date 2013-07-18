@@ -5,13 +5,13 @@ gem 'rails', '3.2.13'
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
 
-gem 'pg'
+gem 'pg', :group => :production
 
-gem 'geocoder'
+gem 'geocoder', :group => :production
 
-gem 'gmaps4rails'
+gem 'gmaps4rails', :group => :production
 
-gem 'devise'
+gem 'devise', :group => :production
 
 # Gems used only for assets and not required
 # in production environments by default.
