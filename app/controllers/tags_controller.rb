@@ -1,7 +1,15 @@
 class TagsController < ApplicationController
 
-  def index
+  def index_popular
     @tags = Tag.all
+    @tags.sort_by! do |tag|
+      tag.posts.count
+    end
+    @tags.reverse!
+  end
+
+  def index_alphabetical
+    @tags = Tag.order("tag ASC")
   end
 
   def show

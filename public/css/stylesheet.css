@@ -15,6 +15,10 @@ nav li {
   padding: 10px;
 }
 
+nav > li > a {
+  color: #08c;
+}
+
 #front-page-body {
   background-color: #313;
   background-image: url('/img/rain.jpg');
@@ -47,7 +51,7 @@ nav li {
 }
 
 body {
-  background-color: #f1eeff;
+  background-color: #e3efff;
   height: 100%;
 }
 
@@ -63,8 +67,8 @@ html {
 
 .yna-box {
   /*width: 30%;*/
-  /*height: 100%;*/
-  background-color: #202;
+  height: 100%;
+  background-color: #005;
   /*float: left;*/
 }
 

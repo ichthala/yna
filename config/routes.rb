@@ -15,8 +15,9 @@ Yna::Application.routes.draw do
   resources :users
   resources :posts
 
+  get '/tags/alphabetical' => 'tags#index_alphabetical'
   get '/tags/:id' => 'tags#show'
-  get '/tags' => 'tags#index'
+  get '/tags' => 'tags#index_popular'
 
   get '/about' => 'info#about'
   get '/resources' => 'info#resources'
