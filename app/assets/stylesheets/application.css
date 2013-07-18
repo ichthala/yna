@@ -18,8 +18,9 @@ body, html, .container-fluid, .row-fluid {
   height:100%;
 }
 
-.row-fluid .span9{
+.row-fluid .span9 {
   float: right;
+  padding-bottom: 40px;
 }
 
 body {
@@ -39,9 +40,17 @@ ul {
   list-style-type: none;
 }
 
+nav ul {
+  padding-left: 20px;
+}
+
 nav li {
   display: inline;
   padding: 10px;
+}
+
+a {
+ color: #08c;
 }
 
 .navbar {
@@ -51,6 +60,14 @@ nav li {
 .navbar-inverse li a {
   color: #08c;
   margin-bottom: 0px;
+}
+
+.navbar-inverse .nav > li > a {
+  color: #08c;
+}
+
+.navbar-fixed-top .navbar-inner, .navbar-fixed-bottom .navbar-inner {
+  padding-left: 20px;
 }
 
 #username a {
@@ -97,26 +114,16 @@ nav li {
 .yna-box {
   height: 100%;
   background-color: #005;
-  position: fixed
+  position: fixed;
+  background-image: url('/img/rain.jpg');
+  padding-left: 20px;
 }
 
 .yna-heading {
-  /*font-size: 200px;*/
+  font-size: 250px;
   color: #aaa;
+  line-height: 200px;
 }
-
-/*.map-container {
-  float:right;
-  width: 40%;
-}*/
-
-.content {
-  float: right
-}
-
-/*p {
-  font-family: Garamond, serif;
-}*/
 
 .post {
   border-radius: 5px;
@@ -143,7 +150,24 @@ nav li {
   color: #fff;
 }
 
-.alert {
-  border: 0px;
-  background-color: none !important;
+textarea {
+  width: 600px;
 }
+
+label {
+  margin-bottom: 0px;
+}
+
+.form-horizontal .control-group {
+  margin-bottom: 5px;
+}
+
+
+
+
+
+
+
+
+
+

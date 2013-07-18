@@ -9,7 +9,7 @@ class TagsController < ApplicationController
   end
 
   def index_alphabetical
-    @tags = Tag.order("tag ASC")
+    @tags = Tag.order("tag COLLATE NOCASE ASC")
   end
 
   def show

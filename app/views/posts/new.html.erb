@@ -10,7 +10,7 @@
 
 <%= form_for @post, html: { class: "form-horizontal" } do |f| %>
   <div class="control-group">
-  <%= f.text_field :text, :size => 200, :placeholder => "Tell your story." %>
+  <%= f.text_area :text, :size => "100x10", :placeholder => "Tell your story." %>
   </div>
 
   <ul>
