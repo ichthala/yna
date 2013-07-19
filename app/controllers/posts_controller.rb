@@ -65,6 +65,10 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find(params[:id])
+    @json = @posts.to_gmaps4rails do |post, marker|
+      marker.infowindow render_to_string(:partial => "post", :locals => { :post => post})
+      marker.json({ :id => post.id })
+    end
   end
 
   def edit
