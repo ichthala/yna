@@ -25,7 +25,7 @@ class Post < ActiveRecord::Base
   end
 
   def gmaps4rails_infowindow
-    "#{self.text[0..200]}... <br /> #{self.tags.map do |tag| tag.tag end } <a href='/posts/#{self.id}'>See more...</a>"
+    # "#{self.text[0..200]}... <br /> #{self.tags.map do |tag| tag.tag end } <a href='/posts/#{self.id}'>See more...</a>"
   end
 
   reverse_geocoded_by :latitude, :longitude do |obj,results|
