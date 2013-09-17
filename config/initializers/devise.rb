@@ -1,12 +1,6 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
-require 'devise'
 Devise.setup do |config|
-
-  # Tells Devise to use the login field (virtual attribute of User)
-  # in authentication_keys
-  config.authentication_keys = [ :login ]
-
   # ==> Mailer Configuration
   # Configure the e-mail address which will be shown in Devise::Mailer,
   # note that it will be overwritten if you use your own mailer class with default "from" parameter.
@@ -92,7 +86,7 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 10
 
   # Setup a pepper to generate the encrypted password.
-  # config.pepper = "70572bf6b61b3d15011b9b680054de95ea4a7ce5d6371638dad680846e9de971dfa8565eb77df81beda683124b76945f8986e5f9cc86c02187b2314954b71d53"
+  # config.pepper = "77d1a048733d023eb9e254d0a043d00c62f34f5fc7b1cd91f73b3bd6306b445e3e48de33e2d2c35c3ce94f2c825fb0be4685304f3d40c3cdb22cb277b4211d4b"
 
   # ==> Configuration for :confirmable
   # A period that the user is allowed to access the website even without
@@ -121,7 +115,7 @@ Devise.setup do |config|
 
   # ==> Configuration for :rememberable
   # The time the user will be remembered without asking for credentials again.
-  config.remember_for = 2.weeks
+  # config.remember_for = 2.weeks
 
   # If true, extends the user's remember period when remembered via cookie.
   # config.extend_remember_period = false

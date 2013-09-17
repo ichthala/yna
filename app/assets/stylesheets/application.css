@@ -85,6 +85,7 @@ a {
 #front-page-body {
   background-color: #005;
   background-image: url('/img/rain.jpg');
+  background-size: 100%;
   margin-top: -40px;
 }
 
